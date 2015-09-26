@@ -1,10 +1,10 @@
 giphy-api-without-credentials
 ===========
 
-Minor tweak of Austin Kelleher's [giphy-api] module that sets `withCredentials` to `false` in the HTTP request.
-
 Simple to use Node.js module for the [giphy.com](http://giphy.com) API. All
 search parameters and endpoints can be found on the [Giphy API documentation](https://github.com/giphy/GiphyAPI).
+
+This version is a minor tweak of Austin Kelleher's [giphy-api](https://github.com/austinkelleher/giphy-api) module that simply sets `withCredentials` to `false` in the HTTP request.
 
 Are you seeing this error in your browser app?
 
