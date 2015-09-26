@@ -2,10 +2,6 @@ var http = require('http');
 var queryString = require('querystring');
 
 /**
-* Base URL of the Giphy API
-*/
-var API_BASE_URL = 'http://api.giphy.com/v1/';
-/**
 * Public API key provided by Giphy for anyone to use. This is used as a fallback
 * if no API key is provided
 */
@@ -183,17 +179,25 @@ GiphyAPI.prototype = {
             });
         }
 
-        http.get(API_BASE_URL + options.api + endpoint + query, function(response) {
-            var body = '';
-            response.on('data', function(d) {
-                body += d;
-            });
-            response.on('end', function() {
-                if (!options.query || options.query.fmt !== 'html') {
-                    body = JSON.parse(body);
-                }
-                callback(null, body);
-            });
+        var requestOptions = {
+          hostname: 'api.giphy.com',
+          path: '/v1/' + options.api + endpoint + query,
+          withCredentials: false,
+          port: 80
+        };
+
+        http.get(requestOptions, function(response) {
+
+          var body = '';
+          response.on('data', function(d) {
+              body += d;
+          });
+          response.on('end', function() {
+              if (!options.query || options.query.fmt !== 'html') {
+                  body = JSON.parse(body);
+              }
+              callback(null, body);
+          });
         }).on('error', function(err) {
             callback(err);
         });

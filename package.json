@@ -1,5 +1,5 @@
 {
-  "name": "giphy-api",
+  "name": "giphy-api-without-credentials",
   "version": "1.0.8",
   "description": "Node.js Giphy API",
   "main": "index.js",
@@ -11,19 +11,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/austinkelleher/giphy-api"
+    "url": "https://github.com/ultralame/giphy-api-without-credentials"
   },
   "keywords": [
     "giphy",
     "gif",
-    "api"
+    "api",
+    "cors",
+    "credentials",
+    "browser"
   ],
-  "author": "Austin Kelleher, a@alk.im",
+  "author": "Colin Parsons, casparsons@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/austinkelleher/giphy-api/issues"
+    "url": "https://github.com/ultralame/giphy-api-without-credentials/issues"
   },
-  "homepage": "https://github.com/austinkelleher/giphy-api",
+  "homepage": "https://github.com/ultralame/giphy-api-without-credentials",
   "devDependencies": {
     "chai": "^3.2.0",
     "mocha": "^2.2.5"

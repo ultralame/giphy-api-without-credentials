@@ -1,24 +1,34 @@
-giphy-api
+giphy-api-without-credentials
 ===========
-[![Build Status](https://travis-ci.org/austinkelleher/giphy-api.svg)](https://travis-ci.org/austinkelleher/giphy-api)
-![NPM version](https://badge.fury.io/js/giphy-api.svg)
+
+Minor tweak of Austin Kelleher's [giphy-api] module that sets `withCredentials` to `false` in the HTTP request.
 
 Simple to use Node.js module for the [giphy.com](http://giphy.com) API. All
 search parameters and endpoints can be found on the [Giphy API documentation](https://github.com/giphy/GiphyAPI).
+
+Are you seeing this error in your browser app?
+
+```
+A wildcard '*' cannot be used in the 'Access-Control-Allow-Origin' header when the credentials flag is true.
+```
+
+If so, this right here is the module you're looking for.
+
 
 ![Giphy logo](http://giphy.com/static/img/giphy_logo_square_social.png)
 
 ## Installation
 ```bash
-npm install giphy-api --save
+npm i giphy-api-without-credentials --S
 ```
 
-## Requiring
+## Importing
+Since the original module receives the API key by invocation which is not supported by ES6 `import`, you'll have to use `require()`
 ```javascript
-// Require with custom API key
-var giphy = require('giphy-api')('API KEY HERE');
-// Require with the public beta key
-var giphy = require('giphy-api')();
+// If you have your own API key, use import the module like this
+const giphy = require('giphy-api-without-credentials')('API KEY HERE');
+// If you're using the public api key you can just invoke without an argument
+const giphy = require('giphy-api-without-credentials')();
 ```
 
 ## [Phrase search](https://github.com/giphy/GiphyAPI#search-endpoint)
