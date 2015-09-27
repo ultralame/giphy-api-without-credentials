@@ -23,11 +23,11 @@ npm i giphy-api-without-credentials -S
 ```
 
 ## Importing
-Since the original module receives the API key by invocation which is not supported by ES6 `import`, you'll have to use `require()`
+Since the original module receives the API key as an argument, you'll have to use `require()` instead of ES6 `import`
 ```javascript
-// If you have your own API key, use import the module like this
+// Require with custom API key
 const giphy = require('giphy-api-without-credentials')('API KEY HERE');
-// If you're using the public api key you can just invoke without an argument
+// Require with the public beta key
 const giphy = require('giphy-api-without-credentials')();
 ```
 
