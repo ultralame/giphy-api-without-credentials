@@ -1,7 +1,7 @@
 {
   "name": "giphy-api-without-credentials",
-  "version": "1.0.8",
-  "description": "Node.js Giphy API",
+  "version": "1.1.0",
+  "description": "Node.js Giphy API, modified to fix CORS errors in browser apps",
   "main": "index.js",
   "directories": {
     "test": "test"
