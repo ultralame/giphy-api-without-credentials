@@ -19,7 +19,7 @@ If so, this right here is the module you're looking for.
 
 ## Installation
 ```bash
-npm i giphy-api-without-credentials --S
+npm i giphy-api-without-credentials -S
 ```
 
 ## Importing
